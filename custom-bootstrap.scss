@@ -1,0 +1,32 @@
+/*
+    QUI APPLICHERO' LE MIE PERSONALIZZAZIONI SU BOOTSTRAP
+    IMPORTANTE: Bisogna importare il nostro file scss i sorgenti
+    di bootstrap. 
+    Dopo, possiamo cambiare le varie impostazioni ed infine
+    ricompileremo tutto in modo da ottenere un custom-bootstrap.css
+*/
+
+// Cambiare i colori di default di bootstrap:
+@import "./scss/functions"; //L'import di functions è necessario per l'import successivo, variables
+@import "./scss/variables"; //Qui sono definiti i colori originali
+
+
+$new-primary: #1fdf64;
+$new-secondary: #000;
+$new-info: #156733;
+
+//Inserisco queesti colori nelle mappe colore di bootstrap
+//Creo una nuova mappa:
+$new-color-theme: (
+  "primary": $new-primary,
+  "secondary": $new-secondary,
+  "info:": $new-info,
+);
+//Faccio una fusione con "merge"
+$theme-colors: map-merge($theme-colors, $new-color-theme); //Ho sovrascritto 3 colori
+
+/*
+  Al momento i partials importati non dichiarano nessuna classe in bootstrap.
+  Per farlo, dobbiamo prima importare bootstrap.scss SEMPRE ALLA FINE
+*/
+@import './scss/bootstrap.scss';

@@ -1,0 +1,11 @@
+/*
+    QUI APPLICHERO' LE MIE PERSONALIZZAZIONI SU BOOTSTRAP
+    IMPORTANTE: Bisogna importare il nostro file scss i sorgenti
+    di bootstrap. 
+    Dopo, possiamo cambiare le varie impostazioni ed infine
+    ricompileremo tutto in modo da ottenere un custom-bootstrap.css
+*/
+/*
+  Al momento i partials importati non dichiarano nessuna classe in bootstrap.
+  Per farlo, dobbiamo prima importare bootstrap.scss SEMPRE ALLA FINE
+*//*# sourceMappingURL=custom-bootstrap.css.map */
